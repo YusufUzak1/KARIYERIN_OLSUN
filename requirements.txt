@@ -1,0 +1,9 @@
+Flask==3.0.0
+python-dotenv
+supabase
+openai
+pdfplumber
+sentence-transformers
+numpy
+gunicorn
+torch --index-url https://download.pytorch.org/whl/cpu

@@ -1,0 +1,38 @@
+# Python cache dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Test ve örnek dosyalar (PDF, DOCX vb.)
+*.pdf
+*.docx
+*.txt
+
+# Ortam değişkenleri (secrets)
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+
+# IDE ve editör
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Geçici dosyalar
+temp_*
+*.tmp
+*.log
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Docker
+Dockerfile
+.dockerignore
