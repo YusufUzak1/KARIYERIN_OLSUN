@@ -7,7 +7,7 @@ __pycache__/
 # Test ve örnek dosyalar (PDF, DOCX vb.)
 *.pdf
 *.docx
-*.txt
+# *.txt  <-- BU SATIRI SİLDİK (Sorunun kaynağı buydu)
 
 # Ortam değişkenleri (secrets)
 .env
@@ -33,6 +33,6 @@ venv/
 .venv/
 env/
 
-# Docker
+# Docker (Bunların image içinde olmasına gerek yok, kalabilir)
 Dockerfile
 .dockerignore
