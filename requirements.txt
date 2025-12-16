@@ -1,7 +1,4 @@
-# Duygu Analizi API - Baðýmlýlýklar
-# Kurulum: pip install -r requirements.txt
-
-flask==3.0.0
+ï»¿flask==3.0.0
 flask-cors==4.0.0
 opencv-python==4.9.0.80
 deepface==0.0.92
