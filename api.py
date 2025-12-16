@@ -28,8 +28,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# CORS - Tüm origin'lere izin ver
-CORS(app, origins="*")
+CORS(app)
 
 # Supabase
 SUPABASE_URL = os.getenv("SUPABASE_URL", "https://huyyknstzknrmdbafpwq.supabase.co")
