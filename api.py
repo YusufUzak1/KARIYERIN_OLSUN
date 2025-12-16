@@ -28,9 +28,8 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Cloud Run ve production için CORS ayarları
-ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:4000").split(",")
-CORS(app, origins=ALLOWED_ORIGINS)
+# CORS - Tüm origin'lere izin ver
+CORS(app, origins="*")
 
 # Supabase
 SUPABASE_URL = os.getenv("SUPABASE_URL", "https://huyyknstzknrmdbafpwq.supabase.co")
