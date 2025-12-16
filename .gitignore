@@ -1,0 +1,16 @@
+# Ignore Python virtual environment
+venv/
+venv312/
+__pycache__/
+*.pyc
+
+# Ignore environment files with secrets
+.env
+
+# Ignore DeepFace model cache
+.deepface/
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.code-workspace
