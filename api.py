@@ -27,7 +27,10 @@ import queue
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "http://localhost:4000"])
+
+# Cloud Run ve production için CORS ayarları
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:4000").split(",")
+CORS(app, origins=ALLOWED_ORIGINS)
 
 # Supabase
 SUPABASE_URL = os.getenv("SUPABASE_URL", "https://huyyknstzknrmdbafpwq.supabase.co")
@@ -331,11 +334,15 @@ def reset_session(session_id):
 
 
 if __name__ == '__main__':
-    print("""
+    # Cloud Run PORT environment değişkenini kullan
+    port = int(os.getenv("PORT", 8080))
+    
+    print(f"""
     =============================================
-       Duygu Analizi API - Port 5001
+       Duygu Analizi API - Port {port}
        DeepFace duygu analizi
        AI cevap puanlama
+       Cloud Run Ready!
     =============================================
     """)
-    app.run(host='0.0.0.0', port=5001, debug=False, threaded=True)
+    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
